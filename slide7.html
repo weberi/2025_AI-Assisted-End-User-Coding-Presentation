@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EUD heute: LC/NC</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="layout">
+ <div id="sidebar-container"></div>  
+    <div class="content">
+      <h2>Motivation</h2>
+      <div class="image-overlay-container">
+        <img src="media/Endusers.png" alt="Enduser Illustration" class="base-image">
+        <img src="media/code-overlay4.png" alt="Code Overlay" class="overlay-image">
+      </div>
+      <p>Ergebnis: Kleine, praxisnahe Software und Automatisierungen</p>
+      <p><strong>End-User Development (EUD)</strong> bezeichnet den Ansatz,
+      dass Personen ohne professionelle IT-Ausbildung selbst digitale Werkzeuge erstellen -
+      angepasst an ihre eigenen Bedarfe.</p>
+    </div>
+  </div>
+</body>
+<script>
+  fetch("sidebar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("sidebar-container").innerHTML = data;
+    });
+</script>
+
+</html>

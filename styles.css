@@ -39,8 +39,9 @@
 .content {
   flex: 1;
   padding: 3em;
+  margin-bottom: 6em;
   position: relative; /* ← wichtig für Regenbereich */
-  overflow: hidden;   /* verhindert Scroll-Leichen */
+  overflow: hidden;   
 }
 
 
@@ -74,24 +75,40 @@
   gap: 1em;
   margin: 2em 0;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .eud-box {
+  position: relative;
   background-color: #eaf3fa;
-  padding: 1.2em 1.5em;
+  padding: 1.2em 2em;
   border-radius: 1em;
   font-weight: bold;
   font-size: 1.1em;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   opacity: 0;
-  transform: translateY(-30px); /* <- Änderung: von oben einfliegen */
+  transform: translateY(-30px);
   animation: fly-in-down 0.8s ease-out forwards;
+  margin-right: 2em;
 }
 
-.delay-1 { animation-delay: 0.2s; }
-.delay-2 { animation-delay: 0.6s; }
-.delay-3 { animation-delay: 1.0s; }
+/* Pfeil nur bei Boxen, die NICHT die letzte sind */
+.eud-box:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -1em;
+  top: 50%;
+  transform: translateX(1em) translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 0.8em solid transparent;
+  border-bottom: 0.8em solid transparent;
+  border-left: 1.2em solid #b0c4d3;
+}
+
+.delay-1 { animation-delay: 0.5s; }
+.delay-2 { animation-delay: 2.5s; }
+.delay-3 { animation-delay: 5.5s; }
 
 @keyframes fly-in-down {
   to {
@@ -99,6 +116,7 @@
     transform: translateY(0);
   }
 }
+
 
 
 .presentation-image {
@@ -119,27 +137,6 @@
   margin: 2em 0;
 }
 
-.lcno-icon {
-  width: 80px;               /* Icon-Größe */
-  height: auto;
-  opacity: 0.9;
-  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.1));
-  transition: transform 0.3s ease;
-}
-
-.lcno-icon:hover {
-  transform: scale(1.12) rotate(2deg); /* dezenter Hover-Effekt */
-}
-/* Container für fallende Icons */
-.icon-rain {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0; /* evtl. hinter Text, ggf. erhöhen */
-}
 
 
 /* Grundstil eines Icons */
@@ -231,3 +228,32 @@ p, li {
   font-size: 1.4em;
   line-height: 1.6;
 }
+
+.h3-like {
+  font-size: 1.4em;
+  font-weight: bolder;
+}
+
+.highlight {
+  font-size: 1.2em;
+  font-weight: bolder;
+  background-color: rgb(255, 207, 53);
+}
+
+.beispielprojekt-box h3 {
+  font-size: 1.4em;
+  font-weight: bolder;
+}
+
+.beispielprojekt-box {
+ font-size: 0.8em;
+  background-color: #eaf3fa;
+  border-radius: 16px;
+  padding: 18px 24px;
+  margin: 18px 0;
+  border: 1.5px solid #b0c4d3;
+  border-left: 5px solid #b0c4d3;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+}
+
+
