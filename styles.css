@@ -1,0 +1,210 @@
+
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background: #eaf3fa;
+  padding: 1.5em;
+  border-right: 1px solid #ccc;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar h3 {
+  margin-top: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 1em;
+}
+
+.sidebar ul li a {
+  color: #336699;
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  flex: 1;
+  padding: 3em;
+}
+
+
+.image-overlay-container {
+  position: relative;
+  display: inline-block; 
+  margin-top: 2em;
+  max-width: 100%;
+}
+
+.base-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5em;
+}
+
+.overlay-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.75;
+  pointer-events: none;
+  border-radius: 0.5em;
+}
+
+.eud-boxes {
+  display: flex;
+  gap: 1em;
+  margin: 2em 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.eud-box {
+  background-color: #eaf3fa;
+  padding: 1.2em 1.5em;
+  border-radius: 1em;
+  font-weight: bold;
+  font-size: 1.1em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(-30px); /* <- Änderung: von oben einfliegen */
+  animation: fly-in-down 0.8s ease-out forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 1.0s; }
+
+@keyframes fly-in-down {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.presentation-image {
+  display: block;
+  max-width: 100%;
+  max-height: 50vh;
+  height: auto;
+  margin: 2em auto;
+  border-radius: 0.5em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+/* Locker platzierte LC/NC-Icons */
+.lcno-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  justify-content: center;
+  margin: 2em 0;
+}
+
+.lcno-icon {
+  width: 80px;               /* Icon-Größe */
+  height: auto;
+  opacity: 0.9;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.1));
+  transition: transform 0.3s ease;
+}
+
+.lcno-icon:hover {
+  transform: scale(1.12) rotate(2deg); /* dezenter Hover-Effekt */
+}
+/* Container für fallende Icons */
+.icon-rain {
+  position: relative;
+  height: 50vh;        /* Bereich, in dem es „regnet“ */
+  overflow: hidden;
+  pointer-events: none; /* nicht klickbar */
+}
+
+/* Grundstil eines Icons */
+.rain-icon {
+  position: absolute;
+  top: -120px;        /* Start oberhalb der Viewport-Grenze */
+  width: 70px;
+  height: auto;
+  opacity: 0.9;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
+  animation: rain 6s linear infinite;
+}
+
+/* Verzögerungen für etwas Zufälligkeit */
+.d0 { animation-delay:  0s; }
+.d1 { animation-delay: .6s; }
+.d2 { animation-delay: 1.2s; }
+.d3 { animation-delay: 1.8s; }
+.d4 { animation-delay: 2.4s; }
+.d5 { animation-delay: 3.0s; }
+.d6 { animation-delay: 3.6s; }
+.d7 { animation-delay: 4.2s; }
+.d8 { animation-delay: 4.8s; }
+.d9 { animation-delay: 5.4s; }
+
+/* Keyframes: von oben nach unten fallen */
+@keyframes rain {
+  0%   { transform: translateY(0)    rotate(0deg);   }
+  100% { transform: translateY(110vh) rotate(15deg); }
+}
+
+
+.bg-special-powerautomate {
+  position: relative;
+  background: url("media/power-automate-screenshot.jpg") center/cover no-repeat;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-special-powerautomate::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* oder mit gradient */
+  z-index: 1;
+}
+
+.bg-special-powerautomate > * {
+  position: relative;
+  z-index: 2;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9fbfd;
+  color: #333;
+  font-size: 1.4em; /* statt Browser-Standard (ca. 16px → jetzt ca. 24px) */
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+p, li {
+  font-size: 1.4em;
+  line-height: 1.6;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Slide 2 – Motivation</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+ <div class="layout">
+ <div id="sidebar-container"></div>  
+
+<div class="content">
+  <h2>End-User Development (EUD)</h2>
+  <div class="eud-boxes">
+    <div class="eud-box delay-1">💬 Wenn man das automatisieren könnte...</div>
+    <div class="eud-box delay-2">🧰 Plattform / Software (LCNC)</div>
+    <div class="eud-box delay-3">⚙️ Eigenes Tool: Formular, App, Excel</div>
+  </div>
+<img id="wechselbild" src="media/INeedATool.png" alt="Illustration" class="presentation-image">
+
+
+
+  <p><strong>End-User Development (EUD)</strong> bezeichnet den Ansatz,
+    dass Personen ohne professionelle IT-Ausbildung selbst digitale Werkzeuge erstellen -
+    angepasst an ihre eigenen Bedarfe.
+  </p>
+
+  <p>Ergebnis: Kleine, praxisnahe Software und Automatisierungen.</p>
+
+  <p>Im Unternehmen: Digitalisieren, ohne die IT zu belasten</p>
+</div>
+
+
+</body>
+
+<script>
+  setTimeout(() => {
+    const img = document.getElementById("wechselbild");
+    img.src = "media/froh2.png";
+  }, 5000); // 5000 ms = 5 Sekunden
+
+
+  fetch("sidebar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("sidebar-container").innerHTML = data;
+    });
+</script>
+</html>

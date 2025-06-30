@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Slide 3 – Motivation 2</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+ <div class="layout">
+ <div id="sidebar-container"></div>  
+    <div class="content">
+      <h2>Motivation</h2>
+      <p>Ziel der Lehre: Nicht-IT-Fachleuten genau die IT- und Programmierkenntnisse vermitteln, die sie in ihrer Praxis am meisten voranbringen.</p>
+      <p>KI kann nicht nur informative oder unterhaltende Texte erzeugen. Sie generiert auch Software und verschiedene Arten von Datenformaten.</p>
+      <ul>
+        <li>Motivation von Nicht-ITlern, programmieren zu lernen?</li>
+        <li>Nutzen von Programmierkenntnissen für Nicht-ITler?</li>
+        <li>Welche Art von IT-Kenntnissen sind heute am nützlichsten?</li>
+      </ul>
+    </div>
+  </div>
+</body>
+<script>
+  fetch("sidebar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("sidebar-container").innerHTML = data;
+    });
+</script>
+</html>
