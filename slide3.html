@@ -3,42 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Slide 4 – Fallstudie</title>
+  <title>Slide 2 – Motivation</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="slide bg-special-powerautomate">
+ <div class="layout">
  <div id="sidebar-container"></div>  
 
-    <div class="content">
+<div class="content">
       <h2>End-User Development</h2>
       <p>Firmen digitalisieren Prozesse, ohne die zentrale IT zu belasten.<br>
-         Bisher typisch: visuelle Low-/No-Code-Plattformen.</p>
+        Bisher typisch: visuelle Low-Code / No-Code-Plattformen.</p>
 
-      <!-- Icon-Regen -->
-      <div class="icon-rain">
-        <img src="media/lcno/uipath.png"     class="rain-icon d0" style="left: 5%;">
-        <img src="media/lcno/doodle.png"     class="rain-icon d1" style="left:15%;">
-        <img src="media/lcno/excel.png"      class="rain-icon d2" style="left:25%;">
-        <img src="media/lcno/gf.png"         class="rain-icon d3" style="left:35%;">
-        <img src="media/lcno/menti.png"      class="rain-icon d4" style="left:45%;">
-        <img src="media/lcno/moodle.png"     class="rain-icon d5" style="left:55%;">
-        <img src="media/lcno/nodered.png"    class="rain-icon d6" style="left:65%;">
-        <img src="media/lcno/pa.jpeg"        class="rain-icon d7" style="left:75%;">
-        <img src="media/lcno/spredsheet.png" class="rain-icon d8" style="left:85%;">
-        <img src="media/lcno/survmon.png"    class="rain-icon d9" style="left:95%;">
+      <!-- Normales eingebettetes Bild -->
+      <div style="position: relative;">
+        <img class="presentation-image" src="media/power-automate-screenshot.jpg" alt="Screenshot Power Automate">
+
+        <!-- Icon-Regen über dem Bild -->
+        <div class="icon-rain">
+          <img src="media/lcno/uipath.png" class="rain-icon d0" style="left: 7%; animation-duration: 7s;">
+          <img src="media/lcno/doodle.png" class="rain-icon d1" style="left:18%; animation-duration: 5.5s;">
+          <img src="media/lcno/excel.png" class="rain-icon d2" style="left:28%; animation-duration: 6.7s;">
+          <img src="media/lcno/gf.png" class="rain-icon d3" style="left:34%; animation-duration: 8s;">
+          <img src="media/lcno/menti.png" class="rain-icon d4" style="left:49%; animation-duration: 6s;">
+          <img src="media/lcno/moodle.png" class="rain-icon d5" style="left:57%; animation-duration: 5.3s;">
+          <img src="media/lcno/nodered.png" class="rain-icon d6" style="left:66%; animation-duration: 7.2s;">
+          <img src="media/lcno/pa.jpeg" class="rain-icon d7" style="left:73%; animation-duration: 6.8s;">
+          <img src="media/lcno/spredsheet.png" class="rain-icon d8" style="left:86%; animation-duration: 5.9s;">
+          <img src="media/lcno/survmon.png" class="rain-icon d9" style="left:91%; animation-duration: 7.5s;">
+        </div>
       </div>
 
       <p><em>Heute:</em> KI generiert nicht nur Texte, sondern auch Code und komplette Dateiformate.</p>
     </div>
   </div>
 
+  <script>
+    fetch("sidebar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("sidebar-container").innerHTML = data;
+      });
+  </script>
 </body>
-<script>
-  fetch("sidebar.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("sidebar-container").innerHTML = data;
-    });
-</script>
+
 </html>
