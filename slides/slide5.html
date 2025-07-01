@@ -11,17 +11,17 @@
  <div id="sidebar-container"></div>  
 
 <div class="content">
-      <h2>Ergebnisse</h3>
+      <h2>Ergebnisse in der Folgewoche</h3>
 
 <!-- Komplettes Diagramm als HTML mit Chart.js -->
 <div style="display: flex; flex-wrap: wrap; gap: 2em; justify-content: center; margin-bottom: 2em;">
   <div style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 1.5em; width: 260px;">
     <canvas id="chart-success" width="220" height="140"></canvas>
-    <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">Erfolg</div>
+    <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">Erfolg?</div>
   </div>
   <div style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 1.5em; width: 260px;">
     <canvas id="chart-effort" width="220" height="140"></canvas>
-    <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">Aufwand</div>
+    <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">Anstrengung?</div>
   </div>
   <div style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 1.5em; width: 260px;">
     <canvas id="chart-recommend" width="220" height="140"></canvas>
@@ -52,16 +52,7 @@
 
   <h3>Selbsteinschätzung Vorerfahrung</h3>
 <div style="display: flex; flex-wrap: wrap; gap: 2em; justify-content: center; margin-bottom: 2em;">
-  <!-- KI Nutzung -->
-  <div style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 1.5em; width: 210px;">
-    <canvas id="chart-ai-usage" width="180" height="140"></canvas>
-    <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">KI Nutzung</div>
-  </div>
-  <!-- KI Kompetenz -->
-  <div style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 1.5em; width: 210px;">
-    <canvas id="chart-ai-competence" width="180" height="140"></canvas>
-    <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">KI Kompetenz</div>
-  </div>
+  
   <!-- Programmieren -->
   <div style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 1.5em; width: 210px;">
     <canvas id="chart-Programmieren" width="180" height="140"></canvas>
@@ -76,7 +67,20 @@
   <div style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 1.5em; width: 210px;">
     <canvas id="chart-webdev" width="180" height="140"></canvas>
     <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">Web Entwicklung</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 2em; justify-content: center; margin-bottom: 2em;">
+
+<!-- KI Nutzung -->
+  <div style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 1.5em; width: 210px;">
+    <canvas id="chart-ai-usage" width="180" height="140"></canvas>
+    <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">KI Nutzung</div>
   </div>
+  <!-- KI Kompetenz -->
+  <div style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 1.5em; width: 210px;">
+    <canvas id="chart-ai-competence" width="180" height="140"></canvas>
+    <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">KI Kompetenz</div>
+  </div>
+  
 </div>
 <div style="text-align:center; font-size:0.95em; margin-bottom:1em;">
   <span style="display:inline-block; width:18px; height:14px; background:#b0c4d3; border:1px solid #888; margin-right:0.5em; vertical-align:middle;"></span> BA

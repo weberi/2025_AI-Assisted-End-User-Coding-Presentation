@@ -73,9 +73,9 @@
   border-left: 1.2em solid #b0c4d3;
 }
 
-.delay-1 { animation-delay: 1s; }
-.delay-2 { animation-delay: 10s; }
-.delay-3 { animation-delay: 15s; }
+.delay-1 { animation-delay: 6s; }
+.delay-2 { animation-delay: 16s; }
+.delay-3 { animation-delay: 19s; }
 
 @keyframes fly-in-down {
   to {
