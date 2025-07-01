@@ -224,6 +224,12 @@ h2 {
   margin-bottom: 0.5em;
 }
 
+h3 {
+  font-size: 1.4em;
+  margin-bottom: 0.5em;
+}
+
+
 p, li {
   font-size: 1.4em;
   line-height: 1.6;

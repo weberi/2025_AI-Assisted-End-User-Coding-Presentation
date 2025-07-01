@@ -11,7 +11,7 @@
  <div id="sidebar-container"></div>  
 
 <div class="content">
-      <h2>Ergebnisse</h2>
+      <h2>Ergebnisse</h3>
 
 <!-- Komplettes Diagramm als HTML mit Chart.js -->
 <div style="display: flex; flex-wrap: wrap; gap: 2em; justify-content: center; margin-bottom: 2em;">
@@ -39,32 +39,53 @@
 
 
 
-  <h2 style="margin-top:2em;">Bearbeitungszeit & Zusammenhänge</h2>
+  <h3>Bearbeitungszeit</h3>
 <div style="display: flex; flex-wrap: wrap; gap: 2em; justify-content: center; margin-bottom: 2em;">
   <!-- Chart 1: Bearbeitungszeit BA/MA -->
   <div style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 1.5em; width: 260px;">
     <canvas id="chart-time-ba-ma" width="220" height="140"></canvas>
-    <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">Bearbeitungszeit (BA/MA)</div>
+    <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">Bearbeitungszeit [h] (BA/MA)</div>
   </div>
-  <!-- Chart 2: Bearbeitungszeit vs. Erfolg -->
-  <div style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 1.5em; width: 260px;">
-    <canvas id="chart-time-success" width="220" height="140"></canvas>
-    <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">Bearbeitungszeit vs. Erfolg</div>
+
+
+    </div>
+
+  <h3>Selbsteinschätzung Vorerfahrung</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 2em; justify-content: center; margin-bottom: 2em;">
+  <!-- KI Nutzung -->
+  <div style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 1.5em; width: 210px;">
+    <canvas id="chart-ai-usage" width="180" height="140"></canvas>
+    <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">KI Nutzung</div>
   </div>
-  <!-- Chart 3: Bearbeitungszeit vs. Komplexität -->
-  <div style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 1.5em; width: 260px;">
-    <canvas id="chart-time-complexity" width="220" height="140"></canvas>
-    <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">Bearbeitungszeit vs. Komplexität</div>
+  <!-- KI Kompetenz -->
+  <div style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 1.5em; width: 210px;">
+    <canvas id="chart-ai-competence" width="180" height="140"></canvas>
+    <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">KI Kompetenz</div>
+  </div>
+  <!-- Programmieren -->
+  <div style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 1.5em; width: 210px;">
+    <canvas id="chart-Programmieren" width="180" height="140"></canvas>
+    <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">Programmieren</div>
+  </div>
+  <!-- HTML -->
+  <div style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 1.5em; width: 210px;">
+    <canvas id="chart-html" width="180" height="140"></canvas>
+    <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">HTML</div>
+  </div>
+  <!-- Web Entwicklung -->
+  <div style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 1.5em; width: 210px;">
+    <canvas id="chart-webdev" width="180" height="140"></canvas>
+    <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">Web Entwicklung</div>
   </div>
 </div>
 <div style="text-align:center; font-size:0.95em; margin-bottom:1em;">
-  <span style="display:inline-block; width:18px; height:14px; background:#e6f2ff; border:1px solid #888; margin-right:0.5em; vertical-align:middle;"></span> BA / Erfolg / Einfach
-  <span style="display:inline-block; width:18px; height:14px; background:#ffb980; border:1px solid #888; margin:0 0.5em 0 1.5em; vertical-align:middle;"></span> MA / Kein Erfolg / Komplex
+  <span style="display:inline-block; width:18px; height:14px; background:#b0c4d3; border:1px solid #888; margin-right:0.5em; vertical-align:middle;"></span> BA
+  <span style="display:inline-block; width:18px; height:14px; background:#ffe5cf; border:1px solid #888; margin:0 0.5em 0 1.5em; vertical-align:middle;"></span> MA
 </div>
-    </div>
-  </div>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
  <script> Chart.register(window.ChartDataLabels);</script>
 <script>
@@ -188,8 +209,9 @@
 
 
   // Farben
-  const colorBA2 = "#e6f2ff";    // Hellblau wie Sidebar
-  const colorMA2 = "#ffb980";    // Kräftiger Peach-Ton
+
+  const colorBA2 = "#b0c4d3";    // Hellblau 
+  const colorMA2 = "#ffe5cf";    // Heller Peach-Ton
 
   // 1. Bearbeitungszeit (BA/MA)
   new Chart(document.getElementById('chart-time-ba-ma'), {
@@ -218,14 +240,19 @@
     }
   });
 
-  // 2. Bearbeitungszeit vs. Erfolg
-  new Chart(document.getElementById('chart-time-success'), {
+
+  // Farben
+  const colorBA3 = "#b0c4d3";    // Hellblau
+  const colorMA3 = "#ffe5cf";    // Heller Peach-Ton
+
+  // KI Nutzung
+  new Chart(document.getElementById('chart-ai-usage'), {
     type: 'bar',
     data: {
-      labels: ['<1', '2–3', '4–5', '>6'],
+      labels: ['Selten', 'Oft', 'Sehr oft'],
       datasets: [
-        { label: 'Erfolg', data: [0, 9, 8, 7], backgroundColor: colorBA2 },
-        { label: 'Kein Erfolg', data: [1, 3, 2, 3], backgroundColor: colorMA2 }
+        { label: 'BA', data: [3, 2, 7], backgroundColor: colorBA3 },
+        { label: 'MA', data: [1, 11, 9], backgroundColor: colorMA3 }
       ]
     },
     options: {
@@ -240,19 +267,19 @@
       },
       scales: {
         x: { stacked: true },
-        y: { stacked: true, beginAtZero: true, max: 18, ticks: { stepSize: 3 } }
+        y: { stacked: true, beginAtZero: true, max: 25, ticks: { stepSize: 5 } }
       }
     }
   });
 
-  // 3. Bearbeitungszeit vs. Komplexität
-  new Chart(document.getElementById('chart-time-complexity'), {
+  // KI Kompetenz
+  new Chart(document.getElementById('chart-ai-competence'), {
     type: 'bar',
     data: {
-      labels: ['<1', '2–3', '4–5', '>6'],
+      labels: ['Wenig', 'Mittel', 'Hoch'],
       datasets: [
-        { label: 'Einfach', data: [1, 8, 3, 4], backgroundColor: colorBA2 },
-        { label: 'Komplex', data: [0, 4, 7, 6], backgroundColor: colorMA2 }
+        { label: 'BA', data: [5, 4, 3], backgroundColor: colorBA3 },
+        { label: 'MA', data: [5, 14, 2], backgroundColor: colorMA3 }
       ]
     },
     options: {
@@ -267,9 +294,91 @@
       },
       scales: {
         x: { stacked: true },
-        y: { stacked: true, beginAtZero: true, max: 14, ticks: { stepSize: 2 } }
+        y: { stacked: true, beginAtZero: true, max: 25, ticks: { stepSize: 5 } }
+      }
+    }
+  });
+
+  // Programmieren
+  new Chart(document.getElementById('chart-Programmieren'), {
+    type: 'bar',
+    data: {
+      labels: ['Kein', 'Etwas', 'Gut'],
+      datasets: [
+        { label: 'BA', data: [3, 7, 2], backgroundColor: colorBA3 },
+        { label: 'MA', data: [6, 13, 2], backgroundColor: colorMA3 }
+      ]
+    },
+    options: {
+      plugins: {
+        legend: { display: false },
+        datalabels: {
+          color: '#222',
+          anchor: 'center',
+          align: 'center',
+          font: { weight: 'bold', size: 14 }
+        }
+      },
+      scales: {
+        x: { stacked: true },
+        y: { stacked: true, beginAtZero: true, max: 25, ticks: { stepSize: 5 } }
+      }
+    }
+  });
+
+  // HTML
+  new Chart(document.getElementById('chart-html'), {
+    type: 'bar',
+    data: {
+      labels: ['Kein', 'Etwas', 'Gut'],
+      datasets: [
+        { label: 'BA', data: [8, 4, 0], backgroundColor: colorBA3 },
+        { label: 'MA', data: [13, 8, 0], backgroundColor: colorMA3 }
+      ]
+    },
+    options: {
+      plugins: {
+        legend: { display: false },
+        datalabels: {
+          color: '#222',
+          anchor: 'center',
+          align: 'center',
+          font: { weight: 'bold', size: 14 }
+        }
+      },
+      scales: {
+        x: { stacked: true },
+        y: { stacked: true, beginAtZero: true, max: 25, ticks: { stepSize: 5 } }
+      }
+    }
+  });
+
+  // Web Entwicklung
+  new Chart(document.getElementById('chart-webdev'), {
+    type: 'bar',
+    data: {
+      labels: ['Kein', 'Etwas', 'Gut'],
+      datasets: [
+        { label: 'BA', data: [10, 2, 0], backgroundColor: colorBA3 },
+        { label: 'MA', data: [11, 10, 0], backgroundColor: colorMA3 }
+      ]
+    },
+    options: {
+      plugins: {
+        legend: { display: false },
+        datalabels: {
+          color: '#222',
+          anchor: 'center',
+          align: 'center',
+          font: { weight: 'bold', size: 14 }
+        }
+      },
+      scales: {
+        x: { stacked: true },
+        y: { stacked: true, beginAtZero: true, max: 25, ticks: { stepSize: 5 } }
       }
     }
   });
 </script>
+</body>
 </html>

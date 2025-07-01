@@ -3,32 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EUD heute: LC/NC</title>
+  <title>Motivation</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="layout">
+    <div id="sidebar-container" class="sidebar"></div>
 
-<div class="layout">
- <div id="sidebar-container"></div>  
     <div class="content">
-      <h2>Motivation</h2>
-      <div class="image-overlay-container">
-        <img src="media/Endusers.png" alt="Enduser Illustration" class="base-image">
-        <img src="media/code-overlay4.png" alt="Code Overlay" class="overlay-image">
-      </div>
-      <p>Ergebnis: Kleine, praxisnahe Software und Automatisierungen</p>
-      <p><strong>End-User Development (EUD)</strong> bezeichnet den Ansatz,
-      dass Personen ohne professionelle IT-Ausbildung selbst digitale Werkzeuge erstellen -
-      angepasst an ihre eigenen Bedarfe.</p>
+
+
+      <p><strong>Die aktuelle Entwicklung:</strong><br>
+      Künstliche Intelligenz generiert nicht nur informative oder unterhaltende Texte, sondern auch Software und diverse Datenformate.</p>
+
+        <img class="presentation-image"src="media/Endusers.png" alt="Enduser Illustration">
+
+
+      <p><strong>Ziel der Lehre:</strong><br>
+<p>Ziel der Lehre: Nicht-IT-Fachleuten genau die IT- und Programmierkenntnisse vermitteln, die sie in ihrer Praxis am meisten voranbringen.</p>
+
+
+
+      <p><strong>Fragen für Didaktik und Auswahl der Lehrinhalte:</strong></p>
+     <ul>
+        <li>Was motiviert Nicht-ITler, programmieren zu lernen?</li>
+    
+     <li>Welchen Nutzen haben Programmierkenntnisse für sie?</li>
+        <li>Welche Art von IT-Kenntnissen ist heute am nützlichsten?</li>
+      </ul>
     </div>
   </div>
-</body>
-<script>
-  fetch("sidebar.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("sidebar-container").innerHTML = data;
-    });
-</script>
 
+  <script>
+    fetch("sidebar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("sidebar-container").innerHTML = data;
+      });
+  </script>
+</body>
 </html>
