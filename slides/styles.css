@@ -73,9 +73,9 @@
   border-left: 1.2em solid #b0c4d3;
 }
 
-.delay-1 { animation-delay: 0.5s; }
-.delay-2 { animation-delay: 2.5s; }
-.delay-3 { animation-delay: 5.5s; }
+.delay-1 { animation-delay: 1s; }
+.delay-2 { animation-delay: 10s; }
+.delay-3 { animation-delay: 15s; }
 
 @keyframes fly-in-down {
   to {
@@ -249,9 +249,7 @@ p, li {
   margin: 0;
 }
 
-.sidebar ul li {
-  margin-bottom: 0.7em;
-}
+
 
 .sidebar ul li a {
   color: #336699;
