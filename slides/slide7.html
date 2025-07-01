@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EUD heute: LC/NC</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <div class="layout">
+    <div id="sidebar-container"></div>
+      <div class="content">
+        <h2>Vorteile KI-gestützter Programmierung gegenüber Low-Code/No-Code</h2>
+<!-- Icon-Regen über dem Bild -->
+        <div class="icon-rain">
+          <img src="media/lcno/uipath.png" class="rain-icon d0" style="left: 7%; animation-duration: 7s;">
+          <img src="media/lcno/doodle.png" class="rain-icon d1" style="left:18%; animation-duration: 5.5s;">
+          <img src="media/lcno/excel.png" class="rain-icon d2" style="left:28%; animation-duration: 6.7s;">
+          <img src="media/lcno/gf.png" class="rain-icon d3" style="left:34%; animation-duration: 8s;">
+          <img src="media/lcno/menti.png" class="rain-icon d4" style="left:49%; animation-duration: 6s;">
+          <img src="media/lcno/moodle.png" class="rain-icon d5" style="left:57%; animation-duration: 5.3s;">
+          <img src="media/lcno/nodered.png" class="rain-icon d6" style="left:66%; animation-duration: 7.2s;">
+          <img src="media/lcno/pa.jpeg" class="rain-icon d7" style="left:73%; animation-duration: 6.8s;">
+          <img src="media/lcno/spredsheet.png" class="rain-icon d8" style="left:86%; animation-duration: 5.9s;">
+          <img src="media/lcno/survmon.png" class="rain-icon d9" style="left:91%; animation-duration: 7.5s;">
+        </div>
+        <ul>
+          <li>Eine Lösung - kein Tool-Wirrwarr </li>
+          <li>Individuell anpassbar statt Plattform-Vorgaben</li>
+          <li>Weniger Vendor-Lockin: Code gehört den Anwendern</li>
+          <li>Programmieren mit KI-Unterstützung ist schneller als Klicken und Konfigurieren </li>
+          <li>Code lässt sich versionieren und gemeinschaftlich entwickeln</li>
+<li>Code lässt sich leichter verwalten</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  fetch("sidebar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("sidebar-container").innerHTML = data;
+    });
+</script>
+
+</html>
