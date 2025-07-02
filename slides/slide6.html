@@ -55,14 +55,12 @@
   </style>
 </head>
 <body>
-
-
- <div class="layout">
- <div id="sidebar-container"></div>  
-    <div class="content">
   <div class="layout">
     <div id="sidebar-container"></div>
     <div class="content">
+
+
+<h2>Weitere Ergebnisse</h2>
         <div class="table-flex">
         <!-- Reported Difficulties -->
         <div class="table-card">
@@ -121,9 +119,16 @@
           </table>
         </div>
       </div>
-      
+
+
+<div class="my-footer">
+ &copy; 2025 Prof. Dr. Irene Weber, irene.weber@hs-kempten.de, 1. Juli 2025, Tag der Lehre @ HS Kempten
     </div>
+</div>
+
   </div>
+
+</body>
   <script>
     fetch("sidebar.html")
       .then(response => response.text())
@@ -131,6 +136,6 @@
         document.getElementById("sidebar-container").innerHTML = data;
       });
   </script>
-</body>
+
 
 </html>
