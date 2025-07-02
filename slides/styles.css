@@ -73,9 +73,13 @@
   border-left: 1.2em solid #b0c4d3;
 }
 
-.delay-1 { animation-delay: 6s; }
+/* wenn Präsentation .delay-1 { animation-delay: 6s; }
 .delay-2 { animation-delay: 16s; }
-.delay-3 { animation-delay: 19s; }
+.delay-3 { animation-delay: 19s; } */
+
+.delay-1 { animation-delay: 0s; }
+.delay-2 { animation-delay: 3s; }
+.delay-3 { animation-delay: 6s; } 
 
 @keyframes fly-in-down {
   to {
@@ -107,7 +111,7 @@
 /* Grundstil eines Icons */
 .rain-icon {
   position: absolute;
-  top: -100px;
+  top: -150px;
   width: 70px;
   opacity: 0;
   filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
@@ -133,10 +137,10 @@
     opacity: 0;
   }
   10% {
-    opacity: 1;
+    opacity: 0.8;
   }
   90% {
-    opacity: 1;
+    opacity: 0.8;
   }
   100% {
     transform: translateY(110vh);
