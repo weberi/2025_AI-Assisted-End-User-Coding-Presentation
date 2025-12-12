@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>5. Ergebnisse</title>
+  <title>5. Results</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -13,31 +13,31 @@
     <div id="sidebar-container"></div>
 
     <div class="content">
-      <h2>Ergebnisse</h2>
+      <h2>Results</h2>
 
-      Erhoben in der Folgewoche
+      Collected the following week
 
-      <!-- Komplettes Diagramm als HTML mit Chart.js -->
+      <!-- Complete diagram as HTML with Chart.js -->
       <div style="display: flex; flex-wrap: wrap; gap: 2em; justify-content: center; margin-bottom: 2em;">
         <div
           style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 1.5em; width: 260px;">
           <canvas id="chart-success" width="220" height="140"></canvas>
-          <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">Erfolg?</div>
+          <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">Success?</div>
         </div>
         <div
           style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 1.5em; width: 260px;">
           <canvas id="chart-effort" width="220" height="140"></canvas>
-          <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">Anstrengung?</div>
+          <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">Effort?</div>
         </div>
         <div
           style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 1.5em; width: 260px;">
           <canvas id="chart-recommend" width="220" height="140"></canvas>
-          <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">Empfehlen?</div>
+          <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">Would recommend?</div>
         </div>
         <div
           style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 1.5em; width: 260px;">
           <canvas id="chart-use" width="220" height="140"></canvas>
-          <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">Anwenden?</div>
+          <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">Would apply?</div>
         </div>
       </div>
       <div style="text-align:center; font-size:0.95em; margin-bottom:1em;">
@@ -51,26 +51,26 @@
 
 
 
-      <h3>Bearbeitungszeit</h3>
+      <h3>Time Spent</h3>
       <div style="display: flex; flex-wrap: wrap; gap: 2em; justify-content: center; margin-bottom: 2em;">
-        <!-- Chart 1: Bearbeitungszeit BA/MA -->
+        <!-- Chart 1: Processing time BA/MA -->
         <div
           style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 1.5em; width: 260px;">
           <canvas id="chart-time-ba-ma" width="220" height="140"></canvas>
-          <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">Bearbeitungszeit [h] (BA/MA)</div>
+          <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">Time Spent [h] (BA/MA)</div>
         </div>
 
 
       </div>
 
-      <h3>Selbsteinschätzung Vorerfahrung</h3>
+      <h3>Self-Assessment Prior Experience</h3>
       <div style="display: flex; flex-wrap: wrap; gap: 2em; justify-content: center; margin-bottom: 2em;">
 
-        <!-- Programmieren -->
+        <!-- Programming -->
         <div
           style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 1.5em; width: 210px;">
           <canvas id="chart-Programmieren" width="180" height="140"></canvas>
-          <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">Programmieren</div>
+          <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">Programming</div>
         </div>
         <!-- HTML -->
         <div
@@ -78,25 +78,25 @@
           <canvas id="chart-html" width="180" height="140"></canvas>
           <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">HTML</div>
         </div>
-        <!-- Web Entwicklung -->
+        <!-- Web Development -->
         <div
           style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 1.5em; width: 210px;">
           <canvas id="chart-webdev" width="180" height="140"></canvas>
-          <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">Web Entwicklung</div>
+          <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">Web Development</div>
         </div>
         <div style="display: flex; flex-wrap: wrap; gap: 2em; justify-content: center; margin-bottom: 2em;">
 
-          <!-- KI Nutzung -->
+          <!-- AI Usage -->
           <div
             style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 1.5em; width: 210px;">
             <canvas id="chart-ai-usage" width="180" height="140"></canvas>
-            <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">KI Nutzung</div>
+            <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">Prior AI Experience</div>
           </div>
-          <!-- KI Kompetenz -->
+          <!-- AI Competence -->
           <div
             style="background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 1.5em; width: 210px;">
             <canvas id="chart-ai-competence" width="180" height="140"></canvas>
-            <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">KI Kompetenz</div>
+            <div style="font-weight: bold; text-align: center; margin-top: 0.5em;">AI Proficiency</div>
           </div>
 
         </div>
@@ -110,8 +110,7 @@
         </div>
 
         <div class="my-footer">
-          (c) 2025 Prof. Dr. Irene Weber, irene.weber@hs-kempten.de, 1.Juli 2025, Tag der Lehre @ HS Kempten
-
+          &copy; 2025 Prof. Dr. Irene Weber, irene.weber@hs-kempten.de, July 1st, 2025, Teaching Day @ HS Kempten
         </div>
       </div>
     </div>
@@ -121,15 +120,15 @@
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 <script> Chart.register(window.ChartDataLabels);</script>
 <script>
-  // Farben wie TikZ: BA = hellgrau, MA = dunkelgrau
-  const colorBA = "#b0c4d3";    // Hellblau 
-  const colorMA = "#ffe5cf";    // Heller Peach-Ton
+  // Colors like TikZ: BA = light gray, MA = dark gray
+  const colorBA = "#b0c4d3";    // Light blue 
+  const colorMA = "#ffe5cf";    // Light peach tone
 
-  // Aufgabe gelöst
+  // Task solved
   new Chart(document.getElementById('chart-success'), {
     type: 'bar',
     data: {
-      labels: ['Nein', 'Ja'],
+      labels: ['No', 'Yes'],
       datasets: [
         { label: 'BA', data: [6, 6], backgroundColor: colorBA },
         { label: 'MA', data: [3, 18], backgroundColor: colorMA }
@@ -152,11 +151,11 @@
     }
   });
 
-  // Wahrgenommener Aufwand
+  // Perceived effort
   new Chart(document.getElementById('chart-effort'), {
     type: 'bar',
     data: {
-      labels: ['Einfach', 'Mittel', 'Schwierig'],
+      labels: ['Easy', 'Medium', 'Difficult'],
       datasets: [
         { label: 'BA', data: [1, 8, 3], backgroundColor: colorBA },
         { label: 'MA', data: [2, 16, 3], backgroundColor: colorMA }
@@ -179,11 +178,11 @@
     }
   });
 
-  // Empfehlung
+  // Recommendation
   new Chart(document.getElementById('chart-recommend'), {
     type: 'bar',
     data: {
-      labels: ['Nein', 'Ja'],
+      labels: ['No', 'Yes'],
       datasets: [
         { label: 'BA', data: [2, 10], backgroundColor: colorBA },
         { label: 'MA', data: [3, 18], backgroundColor: colorMA }
@@ -206,11 +205,11 @@
     }
   });
 
-  // Nutzung
+  // Usage
   new Chart(document.getElementById('chart-use'), {
     type: 'bar',
     data: {
-      labels: ['Nein', 'Vielleicht', 'Ja'],
+      labels: ['No', 'Maybe', 'Yes'],
       datasets: [
         { label: 'BA', data: [2, 3, 7], backgroundColor: colorBA },
         { label: 'MA', data: [0, 12, 9], backgroundColor: colorMA }
@@ -240,12 +239,12 @@
     });
 
 
-  // Farben
+  // Colors
 
-  const colorBA2 = "#b0c4d3";    // Hellblau 
-  const colorMA2 = "#ffe5cf";    // Heller Peach-Ton
+  const colorBA2 = "#b0c4d3";    // Light blue 
+  const colorMA2 = "#ffe5cf";    // Light peach tone
 
-  // 1. Bearbeitungszeit (BA/MA)
+  // 1. Processing time (BA/MA)
   new Chart(document.getElementById('chart-time-ba-ma'), {
     type: 'bar',
     data: {
@@ -273,15 +272,15 @@
   });
 
 
-  // Farben
-  const colorBA3 = "#b0c4d3";    // Hellblau
-  const colorMA3 = "#ffe5cf";    // Heller Peach-Ton
+  // Colors
+  const colorBA3 = "#b0c4d3";    // Light blue
+  const colorMA3 = "#ffe5cf";    // Light peach tone
 
-  // KI Nutzung
+  // AI Usage
   new Chart(document.getElementById('chart-ai-usage'), {
     type: 'bar',
     data: {
-      labels: ['Selten', 'Oft', 'Sehr oft'],
+      labels: ['Rarely', 'Often', 'Very Often'],
       datasets: [
         { label: 'BA', data: [3, 2, 7], backgroundColor: colorBA3 },
         { label: 'MA', data: [1, 11, 9], backgroundColor: colorMA3 }
@@ -304,11 +303,11 @@
     }
   });
 
-  // KI Kompetenz
+  // AI Competence
   new Chart(document.getElementById('chart-ai-competence'), {
     type: 'bar',
     data: {
-      labels: ['Wenig', 'Mittel', 'Hoch'],
+      labels: ['Low', 'Medium', 'High'],
       datasets: [
         { label: 'BA', data: [5, 4, 3], backgroundColor: colorBA3 },
         { label: 'MA', data: [5, 14, 2], backgroundColor: colorMA3 }
@@ -331,11 +330,11 @@
     }
   });
 
-  // Programmieren
+  // Programming
   new Chart(document.getElementById('chart-Programmieren'), {
     type: 'bar',
     data: {
-      labels: ['Kein', 'Etwas', 'Gut'],
+      labels: ['None', 'Some', 'Good'],
       datasets: [
         { label: 'BA', data: [3, 7, 2], backgroundColor: colorBA3 },
         { label: 'MA', data: [6, 13, 2], backgroundColor: colorMA3 }
@@ -362,7 +361,7 @@
   new Chart(document.getElementById('chart-html'), {
     type: 'bar',
     data: {
-      labels: ['Kein', 'Etwas', 'Gut'],
+      labels: ['None', 'Some', 'Good'],
       datasets: [
         { label: 'BA', data: [8, 4, 0], backgroundColor: colorBA3 },
         { label: 'MA', data: [13, 8, 0], backgroundColor: colorMA3 }
@@ -385,11 +384,11 @@
     }
   });
 
-  // Web Entwicklung
+  // Web Development
   new Chart(document.getElementById('chart-webdev'), {
     type: 'bar',
     data: {
-      labels: ['Kein', 'Etwas', 'Gut'],
+      labels: ['None', 'Some', 'Good'],
       datasets: [
         { label: 'BA', data: [10, 2, 0], backgroundColor: colorBA3 },
         { label: 'MA', data: [11, 10, 0], backgroundColor: colorMA3 }
