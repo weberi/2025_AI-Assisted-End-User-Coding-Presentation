@@ -1,11 +1,12 @@
-## Presentation shown at Tag der Lehre, HS Kempten, July 1, 2025
+## AI-Assisted Programming for Non-IT Professionals
 
-View it at https://weberi.github.io/2025_AI-EUC-TDL-2025
+**Presented at NLPIR 2025**
 
-
+View it at https://weberi.github.io/2025_AI-Assisted-End-User-Coding-Presentation/
 
 To run the presentation: 
-- start ```python -m http.server 8000``` in the Präsentation  dir. 
-- open http://localhost:8000/slides/
+- start ```python -m http.server 8000``` in the presentation dir. 
+- open http://localhost:8000/
 - navigate by clicking the links in the sidebar
-- added slide headers and footers afterwards
+
+Prof. Dr. Irene Weber, Kempten University of Applied Sciences
